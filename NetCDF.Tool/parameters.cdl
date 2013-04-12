@@ -1,0 +1,40 @@
+netcdf HPIVlml.parameters {//written in NetCDF CDL language
+dimensions:
+//  dim_string=64;
+  dim_plane_number=unlimited;
+
+//variable declaration and attributes
+variables:
+//acquisition
+  int acquisition;
+    acquisition:channels= 0, 1;
+    acquisition:channel_name= "pressure", "hot_wire";
+
+//reconstructed plane parameters
+  float z_init;
+  float z_step;
+  int   plane_number;
+  //or several user defined positions
+  float z_position(dim_plane_number);
+//convolution reconstruction parameters
+  float laser_wave_length;
+  float z_reference;
+  float pixel_size;
+
+//data value
+data:
+//acquisition
+  acquisition=1;
+
+//reconstructed plane parameters
+  z_init=0.1;
+  z_step=0.2;
+  plane_number=4;
+  //or
+  z_position=0.1, 0.2, 0.25, 0.3, 0.4;
+//convolution reconstruction parameters
+  laser_wave_length=532e-9;
+  z_reference=1.1;
+  pixel_size=6.7e-6;
+}
+

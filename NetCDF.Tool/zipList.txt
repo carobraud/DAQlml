@@ -1,0 +1,6 @@
+struct_parameter_NetCDF.h
+NetCDFinfo.h
+../NetCDF
+compile.cpp.sh
+readParameters.cpp
+

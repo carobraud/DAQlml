@@ -1,0 +1,15 @@
+
+ DAQlml : DAQlml v0.4.4: DAta AcQuisition program of LML (Oct 31 2012, 16:38:20)
+
+    -v               0                        verbose option
+    --info           0                        information
+    --help           0                        help (or -h option)
+    --fd             /dev/comedi0             board device file
+    --fp             parameters.nc            input parameter file
+    --fo             data.nc                  output data file
+    -t               true                     create time axis
+    -c               true                     convert 16bit int value into voltage
+    --test           0                        test, 0: no test, 1: square wave test
+    --boardinfo      0                        print board info
+    --show           0                        display result as a graph, 0: no display 1: data (and histogram on test) 2: + errors 3: + raw data/clean data
+    --buffer         false                    acquisition type

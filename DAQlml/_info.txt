@@ -1,0 +1,30 @@
+#compilation (show error only)
+make clean; make 2> cerr.txt; cat cerr.txt | grep error; rm cerr.txt
+
+#run (pt to pt by default, jitter = 100ms with one channel)
+#!!max acqfreq = 70000-80000 Hz!!
+ncgen -o parameters.nc parameters.cdl; ./DAQlml -h; ./DAQlml --buffer --show 1
+
+#run buffer acquisition (jitter = 10ms with one channel)
+ncgen -o parameters.nc parameters.cdl; ./DAQlml -h; ./DAQlml --buffer --show 1
+
+#run test jitter (with high number of samples)
+# bin width = 1/acqfreq 
+./DAQlml --buffer --test 1  --show 1
+./DAQlml --test 1  --show 1
+
+
+#Alternative ways to look at acquired data:
+ncdump -h data.nc
+ncview    data.nc &
+
+---
+#compilation for control loop (no clean implement yet)
+make clean; make; ncgen -o parameters.nc parameters.cdl; ./DAQlml --control
+#control from a recorded file (no clean implement yet)
+make clean ;make ; ./DAQlml --control --fi /media/temp/data/caroline.braud_copy/test_04_08_10_bis/p_uinf5_vr3.2_f10hz_DC50_80_10.nc -c false ; ncks -O -d time,0,768975 data.nc data.mod.nc; ncview data.mod.nc &
+
+#
+make clean ;make ; ./DAQlml --control  -c false ; ncks -O -d time,0,768975 data.nc data.mod.nc; ncview data.mod.nc &
+ncap -O -s 'diff=HF2-control_signal' data.mod.nc data.diff.nc; ncview data.diff.nc&
+

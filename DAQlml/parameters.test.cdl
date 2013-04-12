@@ -1,0 +1,15 @@
+netcdf parameters {
+variables:
+	int acquisition ;
+		acquisition:range_id = 0 ;
+		acquisition:channels = 0 ;
+		acquisition:sampling_rate = 100;
+		acquisition:number_of_samples = 100;
+		acquisition:channel_name = "square10Hz" ;
+	int control ;
+data:
+
+ acquisition = 1 ;
+
+ control = 0 ;
+}

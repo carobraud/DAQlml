@@ -1,0 +1,3 @@
+PlugIn for CImg library
+such as image format, for loops, algorithms, ...
+

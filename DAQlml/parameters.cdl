@@ -1,0 +1,19 @@
+netcdf DAQlml.parameters {//written in NetCDF CDL language
+//dimensions:
+
+//variable declaration and attributes
+variables:
+//acquisition
+  int acquisition;
+    acquisition:range_id = 0;//[-10..+10] Volts
+    acquisition:channels = 0; //number of channels
+    acquisition:sampling_rate =     100000; //Samples/second 
+    acquisition:number_of_samples = 100000; //AcqTime=number_of_samples/sampling_rate
+    acquisition:channel_name= "c0"; //!!channel_name=channel!!
+//control
+  int control;
+data:
+  acquisition=1;
+  control=0;
+}
+

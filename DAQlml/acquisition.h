@@ -1,0 +1,5 @@
+#ifndef DAQ_ACQUISITION
+#define DAQ_ACQUISITION
+
+#endif// DAQ_ACQUISITION
+

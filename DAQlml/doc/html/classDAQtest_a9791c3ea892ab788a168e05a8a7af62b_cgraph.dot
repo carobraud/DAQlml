@@ -1,0 +1,27 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="DAQtest::test_signal",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="DAQtest::compute_data_histogram",height=0.2,width=0.4,color="black",URL="$classDAQtest.html#adc1b641d2fa37b01c75e6bfe2338001c",tooltip="data histogram"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="DAQtest::compute_duty_cycle",height=0.2,width=0.4,color="black",URL="$classDAQtest.html#a989d2830ba932bd4c1a5073480022b8c",tooltip="calculation of duty cycle"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="DAQtest::period",height=0.2,width=0.4,color="black",URL="$classDAQtest.html#ae579ec66382b28755ebea4ffe3dc6b93"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="DAQtest::compute_filter_data",height=0.2,width=0.4,color="black",URL="$classDAQtest.html#a3daf91b7dda524b0bd044370c9a430f2",tooltip="data filter"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="DAQtest::compute_filter_error",height=0.2,width=0.4,color="black",URL="$classDAQtest.html#a66eac2001378d847887ff28ce91ed980",tooltip="detect error"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="DAQtest::compute_frequence_cycle",height=0.2,width=0.4,color="black",URL="$classDAQtest.html#ad89de13d06368368689537acaa9458e0",tooltip="calculation of frequence"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="DAQtest::detect_edges",height=0.2,width=0.4,color="black",URL="$classDAQtest.html#a78760733116ee12694f95e6bbf59f2e3",tooltip="detect edges from sqwave single channel data"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="DAQtest::duration_samples",height=0.2,width=0.4,color="black",URL="$classDAQtest.html#a4f9a0c1960af8b9070943fd2b7b760cc"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="DAQtest::duration_sampletotime",height=0.2,width=0.4,color="black",URL="$classDAQtest.html#a91ffae95782544b3295a77c7527c020e"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

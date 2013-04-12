@@ -1,0 +1,8 @@
+useCImg.h
+../CImg/CImg.h
+../CImg/README.txt
+CImg_NetCDF.h
+compile.cpp.sh
+writeCImgNetCDF_test.cpp
+readCImgNetCDF_test.cpp
+
